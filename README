@@ -1,0 +1,119 @@
+# Squads-Go: Solana Multisig Protocol Implementation
+
+## Overview
+
+Squads-Go is a Go-based implementation of the Squads Multisig Protocol, providing a CLI and SDK for managing multi-signature wallets on Solana.
+
+## Prerequisites
+
+- Go 1.20+
+- Solana CLI Tools
+- Solana Wallet with SOL for transaction fees
+
+## Quick Setup
+
+### 1. Install Dependencies
+
+```bash
+# Install Solana CLI (if not already installed)
+sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
+
+# Verify Solana installation
+solana --version
+```
+
+### 2. Clone and Build
+
+```bash
+# Clone the repository
+git clone https://github.com/hogyzen12/squads-go.git
+cd squads-go
+
+# Build the CLI
+go build -o squads-cli cmd/main.go
+```
+
+## Usage Examples
+
+### Create a Multisig Wallet
+
+```bash
+# Create a multisig with 3 members, 2/3 threshold
+./squads-cli multisig create \
+  --payer /path/to/payer/keypair.json \
+  --members MEMBER1_PUBKEY,MEMBER2_PUBKEY,MEMBER3_PUBKEY \
+  --permissions 7,7,7 \
+  --threshold 2
+```
+
+### Create a Transaction
+
+```bash
+# Propose a transaction from a multisig wallet
+./squads-cli transaction create \
+  --multisig MULTISIG_ADDRESS \
+  --to RECIPIENT_ADDRESS \
+  --amount 0.005 \
+  --payer /path/to/member/keypair.json
+```
+
+### Approve a Transaction
+
+```bash
+# Approve a pending transaction
+./squads-cli transaction approve \
+  --multisig MULTISIG_ADDRESS \
+  --transaction TRANSACTION_INDEX \
+  --payer /path/to/approver/keypair.json
+```
+
+### Execute an Approved Transaction
+
+```bash
+# Execute an approved transaction
+./squads-cli transaction execute \
+  --multisig MULTISIG_ADDRESS \
+  --transaction TRANSACTION_INDEX \
+  --payer /path/to/executor/keypair.json
+```
+
+## Project Structure
+
+```
+.
+├── cmd/                # CLI Command Implementations
+├── generated/          # Generated Protocol Artifacts
+├── pkg/                # Core SDK Packages
+│   ├── multisig/       # Multisig Wallet Management
+│   └── transaction/    # Transaction Handling
+└── tests/              # Test Suite
+```
+
+## Common Workflow
+
+1. Create a multisig wallet
+2. Propose a transaction
+3. Members approve the transaction
+4. Execute the approved transaction
+
+## Devnet Testing
+
+Use the included test scripts to verify functionality:
+
+```bash
+# Basic devnet tests
+./test.sh --mode basic
+
+# Full transaction lifecycle test
+./transaction_test.sh \
+  --keypair /path/to/keypair.json \
+  --multisig YOUR_MULTISIG_ADDRESS
+```
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Client Diversity
+
+Squads-Go represents an independent implementation of the Squads Multisig Protocol, enhancing client diversity and protocol resilience on Solana. Designed as a standalone Go library and CLI, it provides an alternative to existing implementations, reducing single-point-of-failure risks in the protocol ecosystem.
