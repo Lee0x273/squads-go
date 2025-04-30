@@ -9,7 +9,7 @@ import (
 	"github.com/gagliardetto/solana-go"
 	"github.com/gagliardetto/solana-go/rpc"
 
-	"squads-go/generated/squads_multisig_program"
+	"github.com/hogyzen12/squads-go/generated/squads_multisig_program"
 )
 
 // fetchMultisigAccount fetches and decodes a multisig account

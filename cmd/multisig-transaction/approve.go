@@ -11,7 +11,7 @@ import (
 	"github.com/gagliardetto/solana-go/rpc/ws"
 	"github.com/spf13/cobra"
 
-	"squads-go/pkg/transaction"
+	"github.com/hogyzen12/squads-go/pkg/transaction"
 )
 
 // NewApproveCommand creates the command for approving a transaction proposal

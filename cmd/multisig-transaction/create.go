@@ -16,8 +16,8 @@ import (
 	"github.com/gagliardetto/solana-go/rpc/ws"
 	"github.com/spf13/cobra"
 
-	"squads-go/generated/squads_multisig_program"
-	"squads-go/pkg/multisig"
+	"github.com/hogyzen12/squads-go/generated/squads_multisig_program"
+	"github.com/hogyzen12/squads-go/pkg/multisig"
 
 	ag_binary "github.com/gagliardetto/binary"
 )

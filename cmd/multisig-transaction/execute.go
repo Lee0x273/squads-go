@@ -12,8 +12,8 @@ import (
 	"github.com/gagliardetto/solana-go/rpc/ws"
 	"github.com/spf13/cobra"
 
-	"squads-go/pkg/multisig"
-	"squads-go/pkg/transaction"
+	"github.com/hogyzen12/squads-go/pkg/multisig"
+	"github.com/hogyzen12/squads-go/pkg/transaction"
 )
 
 // NewExecuteCommand creates the command for executing an approved transaction

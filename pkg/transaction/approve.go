@@ -10,8 +10,8 @@ import (
 	"github.com/gagliardetto/solana-go/rpc"
 	"github.com/gagliardetto/solana-go/rpc/ws"
 
-	"squads-go/generated/squads_multisig_program"
-	"squads-go/pkg/multisig"
+	"github.com/hogyzen12/squads-go/generated/squads_multisig_program"
+	"github.com/hogyzen12/squads-go/pkg/multisig"
 )
 
 // ProposalVoteInput defines input parameters for voting on a proposal

@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	multisigcreate "squads-go/cmd/multisig-create"
-	multisiginfo "squads-go/cmd/multisig-info"
-	multisigtransaction "squads-go/cmd/multisig-transaction"
+	multisigcreate "github.com/hogyzen12/squads-go/cmd/multisig-create"
+	multisiginfo "github.com/hogyzen12/squads-go/cmd/multisig-info"
+	multisigtransaction "github.com/hogyzen12/squads-go/cmd/multisig-transaction"
 )
 
 func main() {

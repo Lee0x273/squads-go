@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"squads-go/generated/squads_multisig_program"
+	"github.com/hogyzen12/squads-go/generated/squads_multisig_program"
 
 	ag_binary "github.com/gagliardetto/binary"
 	"github.com/gagliardetto/solana-go"

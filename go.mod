@@ -1,4 +1,4 @@
-module squads-go
+module github.com/hogyzen12/squads-go
 
 go 1.23.1
 
